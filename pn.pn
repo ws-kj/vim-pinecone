@@ -22,4 +22,4 @@ fizzBuzz :: {start: Int, end: Int}: (
         |
         print: i
     )
-)        
+)      
