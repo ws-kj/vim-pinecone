@@ -9,14 +9,16 @@ Syntax highlighting in VIM for the pinecone programming language.
 3. `cp pn.vim ~/.vim/syntax/pn.vim` You may need to create the `~/.vim/syntax`
 4. Add the following to your `~/.vim/filetype.vim`:
 
-`if exists("did_load_filetypes")`
-  `finish`
-`endif`
-`augroup filetypedetect`
+```vimscript
+if exists("did_load_filetypes") 
+   finish 
+ endif 
+ augroup filetypedetect 
   
-    `au! BufNewFile,BufRead *.vim setf pn`    
+     au! BufNewFile,BufRead *.vim setf pn     
 
-`augroup END`
+ augroup END
+```
 
 
 (if you already have a structure like that, just add the `au!` line between `augroup filetypedetect` and `augroup END`)
